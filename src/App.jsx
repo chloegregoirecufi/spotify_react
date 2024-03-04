@@ -1,10 +1,10 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 
 const App = () => {
   return (
-    <h1 className="text-3xl font-bold underline text-green_06">
-      Hello sweetyyy!
-    </h1>  )
+    <Outlet />
+    )
 }
 
 export default App
