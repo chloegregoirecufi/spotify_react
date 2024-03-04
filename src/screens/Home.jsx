@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchAlbums } from '../redux/album/albumSlice'
 import { selectAlbumsData } from '../redux/album/albumSelector'
+import PageLoader from '../components/Loader/PageLoader';
 
 const Home = () => {
   //on recupere le hook useDispatch de react-redux
@@ -20,16 +21,17 @@ const Home = () => {
 
 
   return (
-    loading ? <div>Chargement...</div> :
+    <div>Home </div>
+  //   loading ? <PageLoader/> :
 
-      dataAlbum && dataAlbum.map((album, index) => (
-    <div key={index}>
-      <h1>{album?.title}</h1>
-      <p>{album?.artist?.biography}</p>
-    </div>
-  )
-  ) 
-  )
+  //     dataAlbum && dataAlbum.map((album, index) => (
+  //   <div key={index}>
+  //     <h1>{album?.title}</h1>
+  //     <p>{album?.artist?.biography}</p>
+  //   </div>
+  // )
+  // ) 
+ )
 }
 
 export default Home
