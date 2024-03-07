@@ -1,13 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../App";
-import ErrorPage from "../screens/ErrorPage";
-import Home from "../screens/Home";
-import Search from "../screens/Search";
-import Library from "../screens/Library";
-import Playlist from "../screens/Playlist";
-import { Wishlist } from "../screens/Wishlist";
+import App from "../../App";
+import ErrorPage from "../ErrorScreens/ErrorPage";
+import Home from "./Home";
+import Search from "../OnlineScreens/Search";
+import Library from "../OnlineScreens/Library";
+import Playlist from "../OnlineScreens/Playlist";
+import { Wishlist } from "../OnlineScreens/Wishlist";
 
-const MainRouter = createBrowserRouter([
+const OnlineRouteur = createBrowserRouter([
     {
         element: (
             <>
@@ -46,4 +46,4 @@ const MainRouter = createBrowserRouter([
     }
 ])
 
-export default MainRouter
+export default OnlineRouteur
