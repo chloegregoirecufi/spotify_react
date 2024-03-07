@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './App.css'
 import { RouterProvider } from 'react-router-dom'
-import OnlineRouteur from './screens/OnlineScreens/OnlineRouteur.jsx'
+import OnlineRouteur from './router/OnlineRouteur.jsx'
 import { Provider } from 'react-redux'
 import store from './redux/store'
 

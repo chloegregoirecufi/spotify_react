@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import App from "../../App";
-import ErrorPage from "../ErrorScreens/ErrorPage";
-import Home from "./Home";
-import Search from "../OnlineScreens/Search";
-import Library from "../OnlineScreens/Library";
-import Playlist from "../OnlineScreens/Playlist";
-import { Wishlist } from "../OnlineScreens/Wishlist";
+import App from "../App";
+import ErrorPage from "../screens/ErrorScreens/ErrorPage";
+import Home from "../screens/OnlineScreens/Home";
+import Search from "../screens/OnlineScreens/Search";
+import Library from "../screens/OnlineScreens/Library";
+import Playlist from "../screens/OnlineScreens/Playlist";
+import { Wishlist } from "../screens/OnlineScreens/Wishlist";
 
 const OnlineRouteur = createBrowserRouter([
     {
