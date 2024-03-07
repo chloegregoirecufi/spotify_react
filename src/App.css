@@ -2,7 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/*active navigation bar*/
+.active {
+  @apply text-green;
+}
 
-body{
-  background-color: grey;
+.active svg{
+  @apply text-green;
+}
+
+/* barre de scroll */
+::-webkit-scrollbar{
+  width: 10px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  @apply bg-green_top;
+  border-radius: 5px;
 }

@@ -1,10 +1,13 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
+import { imageUrl } from '../../constants/apiConstant'
 
 const HomeOffline = () => {
   return (
     <>
-    <div>HomeOffline</div>
+    <div className='w-screen bg-black'>
+      <img src={`${imageUrl}/logo.png`} alt="Logo Spotify" className='w-full h-28 object-contain py-2' />
+    </div>
     <Outlet/>
     </>
   )
