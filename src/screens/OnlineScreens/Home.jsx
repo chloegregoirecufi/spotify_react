@@ -7,7 +7,10 @@ import AlbumCard from '../../components/AlbumCard';
 
 const Home = () => {
   //on recupere le hook useDispatch de react-redux
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
+
+  //on doit recuperer les infos du playerSlice
+  const {activeSong, isPlaying} = useSelector(state => state.player);
 
   useEffect(() => {
     dispatch(fetchAlbums())//dispatch exectue les methode avec redux, permet de maj les states albums et loading de albumsSlice
@@ -35,6 +38,14 @@ const Home = () => {
             key={index}
             //on lui passe data comme props de l'album
             data={data}
+            //songs: tableau de chanson
+            songs={data.songs}
+            //isPlaying: pour savoir si une chanson est en cours de lecture
+            isPlaying={isPlaying}
+            //activeSong: pour savoir quelle chanson est en cours de lecture
+            activeSong={activeSong}
+            //index: pour savoir l'index de la chanson dans le tableau
+            index={0}
             />
           )
         })}
