@@ -8,9 +8,9 @@ export const imageUrl = `${apiRoot}/images`;
 //url pour les avatars
 export const avatarUrl = `${apiRoot}/images/avatars`;
 //url pour les images d'albums
-export const albumUrl = `${apiRoot}upload/images/albums`;
+export const albumUrl = `${apiRoot}/upload/images/albums`;
 //url pour les images d'artiste
-export const artistUrl = `${apiRoot}upload/images/artists`;
+export const artistUrl = `${apiRoot}/upload/images/artists`;
 //url pour les mp3
-export const musicUrl = `${apiRoot}upload/files/music`;
+export const musicUrl = `${apiRoot}/upload/files/music`;
 

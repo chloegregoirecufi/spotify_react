@@ -6,6 +6,7 @@ import Search from "../screens/OnlineScreens/Search";
 import Library from "../screens/OnlineScreens/Library";
 import Playlist from "../screens/OnlineScreens/Playlist";
 import { Wishlist } from "../screens/OnlineScreens/Wishlist";
+import Detail from "../screens/OnlineScreens/Detail";
 
 const OnlineRouteur = createBrowserRouter([
     {
@@ -37,11 +38,11 @@ const OnlineRouteur = createBrowserRouter([
                 path:"/wishlist",
                 element: <Wishlist/>
             },
-
-
-
-
-
+            //On déclare la route pour la vu détail avec un paramètre
+            {
+                path: "/detail/:id",
+                element: <Detail />
+            }
         ]
     }
 ])
