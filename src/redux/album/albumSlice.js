@@ -33,7 +33,7 @@ export const fetchAlbums = ()=> async dispatch => {
         //on passe le state loading à true pour signifier qu'on attend une réponse
         dispatch(setLoading(true));
         
-        const response = await axios.get(`${apiUrls}/albums?page=1&isActive=true`)
+        const response = await axios.get(`${apiUrls}/alba?page=1&isActive=true`)
         //on set les données dans le state albums
         dispatch(setAlbums(response.data));
         //on repasse le state loading a false
@@ -50,7 +50,7 @@ export const fetchAlbumDetail = (id)=> async dispatch =>{
         //on passe le state loading à true pour signifier qu'on attend une réponse
         dispatch(setLoading(true));
         
-        const response = await axios.get(`${apiUrls}/albums?page=1&id=${id}&isActive=true`)
+        const response = await axios.get(`${apiUrls}/alba?page=1&id=${id}&isActive=true`)
         //on set les données dans le state albums
         dispatch(setAlbumDetail(response.data['hydra:member'][0]));
         //on repasse le state loading a false

@@ -1,8 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { albumUrl, artistUrl } from '../../constants/apiConstant'
+import PageLoader from '../Loader/PageLoader';
+
 
 const HeaderInfo = ({dataAlbum}) => {
 
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        setIsLoading(false);
+    }, [])
 //on recupère la photo d'artiste si elle existe sinon photo album
 const imgPath = dataAlbum?.artist?.imagePath ? `${artistUrl}/${dataAlbum?.artist?.imagePath}` :`${albumUrl}/${dataAlbum?.imagePath}`
 
@@ -45,6 +52,7 @@ console.log(durationAlbum());
 
 
   return (
+    isLoading ? <PageLoader /> : 
     dataAlbum &&
     <div className='flex items-center'>
         <img src={imgPath} alt={dataAlbum?.artist?.name ?? 'photo artiste'} className='w-10 h-10 rounded-full object-cover' />
