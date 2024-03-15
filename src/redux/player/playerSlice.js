@@ -8,6 +8,7 @@ const initialState = {
     isActive: false, //etat du playeur
     isPlaying: false, //etat de la lecture
     activeSong: {}, //chanson en cours de lecture
+
 }
 
 //Création du slice pour la gestion du playeur
@@ -31,6 +32,7 @@ const playerSlice = createSlice({
             //on stock les infos de l'album
             state.currentAlbum = action.payload?.data;
         },
+        
 
         //pour avancer la liste de lecture 
         nextSong: (state, action) => {
@@ -53,6 +55,7 @@ const playerSlice = createSlice({
         playPause: (state, action) => {
             state.isPlaying = action.payload;
         }
+
 
     }
 })

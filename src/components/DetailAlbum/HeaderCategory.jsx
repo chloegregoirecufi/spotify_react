@@ -17,10 +17,10 @@ const HeaderCategory = ({dataAlbum}) => {
             //si c'est le premier element on ne met pas de point
             index === 0
             ? <Link key={index} to='#' className='font-medium'>{category.label}</Link>
-            : <>
+            : <div className='flex' key={index}>
                 <Dot />
-               <Link key={index} to='#' className='font-medium'>{category.label}</Link>
-                </>
+               <Link  to='#' className='font-medium'>{category.label}</Link>
+                </div>
             ))
             }
         </div>

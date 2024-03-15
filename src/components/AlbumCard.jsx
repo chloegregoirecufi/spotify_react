@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import { playPause, setActiveAlbum, setActiveSong } from '../redux/player/playerSlice'
 import PlayPause from './PlayPause'
 
-const AlbumCard = ({data, index, songs, isPlaying, activeSong}) => {
+const AlbumCard = ({data, index, songs, isPlaying, activeSong, artist=''}) => {
     //constante qui recupère l'image de l'album
     const imgPath = `${albumUrl}/${data.imagePath}`
 
@@ -13,7 +13,7 @@ const AlbumCard = ({data, index, songs, isPlaying, activeSong}) => {
     const dispatch = useDispatch();
 
     //on redefinit des constantes pour les données de l'album
-    const artistName = data?.artist?.name ?? 'artiste inconnu'
+    const artistName = data?.artist?.name ?? artist
     const albumName = data?.title ?? 'album inconnu'
     const albumId = data?.id ?? 0 
     //on va definir la methode lors qu'on met pause 
@@ -31,9 +31,9 @@ const AlbumCard = ({data, index, songs, isPlaying, activeSong}) => {
 
   return (
     <div className='flex flex-col w-[250px] p-4 bg-white_01 hover:bg-white_05 transition-all ease-out duration-500 animate-slideup rounded-lg cursor-pointer'>
-        <div className='relative w-full h-56 flex flex-col group'>
+        <div className='relative w-full  flex flex-col group'>
             <Link to={`/detail/${albumId}`}>
-                <img src={imgPath} alt={albumName} className='card-sh rounded-lg object-cover' />
+                <img src={imgPath} alt={albumName} className='card-sh rounded-lg object-cover h-52 w-52' />
             </Link>
             {/*on place notre composant playpause ici */}
             <div className={`absolute ${activeSong?.title === songs[index].title ? 'flex' : 'hidden'} group-hover:flex right-3 bottom-5`}>

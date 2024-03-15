@@ -1,6 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+import { apiUrls } from "../../constants/apiConstant";
 
-const albumSlice = createSlice({
+
+const artistSlice = createSlice({
     //on lui donne un nom
     name: 'artist',
     //on initialise les states(etat, like a variable)
@@ -21,7 +24,7 @@ const albumSlice = createSlice({
 });
 
 //on exporte les actions sous forme de constantes
-export const {setLoading, setArtistDetail} = albumSlice.actions;
+export const {setLoading, setArtistDetail} = artistSlice.actions;
 
 //on créer une méthode qui va récuperer l'artiste avec l'id
 export const fetchArtistDetail = (id)=> async dispatch =>{
