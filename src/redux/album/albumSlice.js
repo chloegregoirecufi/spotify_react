@@ -77,7 +77,7 @@ export const fetchSearch = (searchWord) => async dispatch =>{
         dispatch(setLoading(true));
         
         const responseAlbums = await axios.get(`${apiUrls}/alba?page=1&title=${searchWord}&isActive=true`);
-        const responseArtist = await axios.get(`${apiUrls}/alba?page=1&artist.name=${searchWord}&isActive=true`);
+        const responseArtist = await axios.get(`${apiUrls}/artists?page=1&name=${searchWord}&albums.isActive=true`);
         //on set les données dans le state albums
         dispatch(setSearchAlbum(responseAlbums.data));
         dispatch(setSearchArtist(responseArtist.data));
