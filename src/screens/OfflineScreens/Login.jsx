@@ -51,7 +51,8 @@ const navigate = useNavigate();
 
   return (
     <div className='flex flex-1 flex-col h-screen justify-start items-center bg-black'>
-      <h2 className='text-white font-bold text-xl py-5'>Connecter vous !</h2>
+      <h2 className='text-white font-bold text-xl py-5'>Modifier mes information</h2>
+      <div className='text-red-600 font-bold mb-4'>{error}</div>
       <form onSubmit={handleSubmit} className='max-w-md mx-auto'>
         {/*input pour mail */}
         <CustomInput state={email} label="Mon email" type="email" callable={(event)=> setEmail(event.target.value)}/>
@@ -62,7 +63,7 @@ const navigate = useNavigate();
         <div className='flex items-center justify-center pt-5'>
           { isLoading ? <ButtonLoader /> :
             <button type='submit' className='bg-green hover:bg-grenn_top text-white font-bold py-2 px-4 rounded'>
-            S'enregistrer
+            Modifier mes informations
           </button>}
           </div>
       </form>

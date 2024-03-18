@@ -27,7 +27,7 @@ const AppRouteur = () => {
         if(user){
             setUserId(user.userId);
             setEmail(user.email);
-            setNickname(user.setNickname);
+            setNickname(user.nickname);
             setInSession(true);
         }else{
             setInSession(false);
