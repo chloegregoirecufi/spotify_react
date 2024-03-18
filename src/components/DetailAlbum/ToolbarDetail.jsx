@@ -44,10 +44,10 @@ const ToolbarDetail = ({dataAlbum}) => {
     
     const checkFavorite =  () => {
         if(userFavorite){
-            const idArray = userFavorite.map((item)=>`/api/albums/${item.id}`);
+            const idArray = userFavorite.map((item)=>`/api/alba/${item.id}`);
             setListArray([...new Set(idArray)])
             
-            if(idArray.includes(`/api/albums/${albumId}`)) setIsInList(true);
+            if(idArray.includes(`/api/alba/${albumId}`)) setIsInList(true);
         }
     }
     //methode lors qu'on met pause 

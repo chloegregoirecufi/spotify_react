@@ -5,3 +5,5 @@ export const Wishlist = () => {
     <div>Wishlist</div>
   )
 }
+
+
